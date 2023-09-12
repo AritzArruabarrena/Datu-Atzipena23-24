@@ -11,8 +11,8 @@ public class CopyBytes {
         FileOutputStream out = null;
 
         try {
-            in = new FileInputStream("xanadu.txt");
-            out = new FileOutputStream("outagain.txt");
+            in = new FileInputStream("..\\..\\xanadu.txt");
+            out = new FileOutputStream("..\\..\\outagain.txt");
             int c;
 
             while ((c = in.read()) != -1) {
@@ -25,7 +25,8 @@ public class CopyBytes {
             if (out != null) {
                 out.close();
             }
-        }
+            
+        } 
     }
 }
 
