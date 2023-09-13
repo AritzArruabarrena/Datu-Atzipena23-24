@@ -20,16 +20,9 @@ public class CopyBytesFNEKontrolatuz {
             while ((c = in.read()) != -1) {
                 out.write(c);
             }
-
         } 
         catch (FileNotFoundException e) {
-            if (in != null) {
-                System.out.println("Xanadu ez da aurkitu");
-            }
-            if (out != null) {
-                System.out.println("outagain ez da aurkitu");
-            }
-
+            System.out.println("Xanadu ez da aurkitu");
         } finally {
             if (in != null) {
                 in.close();
