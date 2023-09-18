@@ -3,7 +3,7 @@ package dambi;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
+//Programa hone xanadu.txt irakurriko du, ondoren outagain sortuko du (fileoutputStream erabitzen da sortzeko) eta ondoren irakurri ostean outagain.txt archiboan berdina idatziko du
 public class CopyBytes {
     public static void main(String[] args) throws IOException {
 

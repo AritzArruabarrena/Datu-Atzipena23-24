@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
+//Hemengo honetan xanadu irakurriko du eta outagain sortu bertan idatziz, baina xanadu ez badu aurkitzen try-catch-ak salto egingo du
 public class CopyBytesFNEKontrolatuz {
 
     public static void main(String[] args) throws IOException {
