@@ -1,9 +1,12 @@
 package dambi;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.security.PublicKey;
 import java.util.ArrayList;
@@ -37,6 +40,9 @@ public class App {
                 case 2:
                     met2();
                     break;
+                case 3:
+                    exportatu();
+                    break;
                 case 5:
                     System.out.println("Eskerrik asko programa hau erabiltzeagatik.");
                     break;
@@ -67,7 +73,7 @@ public class App {
             }
         }
         System.out.println("Altuena: " + altuena.getAltuera() + " " + altuena.getIzena());
-    } 
+    }
 
     public static ArrayList<Mendia> mendiakargatu() {
         String split = ";";
@@ -91,5 +97,27 @@ public class App {
         }
         return mendiakArrayList;
 
+    }
+
+    public static void exportatu() {
+        
+        ArrayList<Mendia> mendiaArrayList = mendiakargatu();
+
+        try(FileWriter giz = new  FileWriter("Gipuzkoa.csv");FileWriter biz = new  FileWriter("Bizkaia.csv");FileWriter ara = new  FileWriter("Araba.csv");FileWriter naf = new  FileWriter("Nafarroa.csv")) {
+            
+            for (Mendia m : mendiaArrayList) {
+                if (m.getProbintzia().equals("Gipuzkoa")) {
+                    giz.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
+                } if (m.getProbintzia().equals("Bizkaia")) {
+                    biz.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
+                } if(m.getProbintzia().equals("Araba")){
+                    ara.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
+                }if(m.getProbintzia().equals("Nafarroa")){
+                    naf.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Ez du sortu");
+        }
     }
 }
