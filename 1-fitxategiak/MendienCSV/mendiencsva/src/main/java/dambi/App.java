@@ -107,7 +107,7 @@ public class App {
             
             for (Mendia m : mendiaArrayList) {
                 if (m.getProbintzia().equals("Gipuzkoa")) {
-                    giz.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
+    
                 } if (m.getProbintzia().equals("Bizkaia")) {
                     biz.append(m.getIzena() + ";" + m.getAltuera() + ";" + m.getProbintzia() + "\n");
                 } if(m.getProbintzia().equals("Araba")){
