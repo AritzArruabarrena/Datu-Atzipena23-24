@@ -90,8 +90,9 @@ public class Country
         return foundation;
     }
 
-    /* @XmlElement( name = "Country_Foundation_Date" )
-    @XmlJavaTypeAdapter( DateAdapter.class )*/
+    @XmlElement( name = "Country_Foundation_Date" )
+    @XmlJavaTypeAdapter( DateAdapter.class )
+    
     
     public void setFoundation( LocalDate foundation )
     {
