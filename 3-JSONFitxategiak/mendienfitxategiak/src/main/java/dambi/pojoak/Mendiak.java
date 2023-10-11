@@ -1,19 +1,19 @@
 package dambi.pojoak;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Mendiak {
-  public ArrayList<Mendia> mendiak;
+ public List<Mendia> mendiak;
 
-public Mendiak(ArrayList<Mendia> mendiak) {
+public Mendiak(List<Mendia> mendiak) {
     this.mendiak = mendiak;
 }
 
-public ArrayList<Mendia> getMendiak() {
+public List<Mendia> getMendiak() {
     return mendiak;
 }
 
-public void setMendiak(ArrayList<Mendia> mendiak) {
+public void setMendiak(List<Mendia> mendiak) {
     this.mendiak = mendiak;
 }  
 

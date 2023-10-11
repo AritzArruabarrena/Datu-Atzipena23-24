@@ -4,7 +4,7 @@ public class Mendia {
     private int id;
     private String mendia;
     private int altuera;
-    private String probintzia;
+    private String probintzia; 
     
     public Mendia(int id, String mendia, int altuera, String probintzia) {
         this.id = id;
