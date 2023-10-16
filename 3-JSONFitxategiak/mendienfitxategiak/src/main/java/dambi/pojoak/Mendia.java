@@ -1,11 +1,18 @@
 package dambi.pojoak;
 
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "id" , "mendia", "altuera", "probintzia" })
+@XmlRootElement(name = "Mendia")
 public class Mendia {
     private int id;
     private String mendia;
     private int altuera;
     private String probintzia; 
     
+
     public Mendia(int id, String mendia, int altuera, String probintzia) {
         this.id = id;
         this.mendia = mendia;
@@ -16,7 +23,7 @@ public class Mendia {
     public int getId() {
         return id;
     }
-
+    @XmlElement(name = "Mendia_Id")
     public void setId(int id) {
         this.id = id;
     }
@@ -25,6 +32,7 @@ public class Mendia {
         return mendia;
     }
 
+    @XmlElement(name = "Mendia_Mendia")
     public void setMendia(String mendia) {
         this.mendia = mendia;
     }
@@ -33,6 +41,7 @@ public class Mendia {
         return altuera;
     }
 
+    @XmlElement(name = "Mendia_Altuera")
     public void setAltuera(int altuera) {
         this.altuera = altuera;
     }
@@ -41,6 +50,7 @@ public class Mendia {
         return probintzia;
     }
 
+    @XmlElement(name = "Mendia_Probintzia")
     public void setProbintzia(String probintzia) {
         this.probintzia = probintzia;
     }

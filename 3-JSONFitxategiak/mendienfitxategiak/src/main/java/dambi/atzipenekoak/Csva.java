@@ -54,13 +54,15 @@ public class Csva {
         int i = 0;
 
         try (FileWriter idatzi = new FileWriter(strFileOut)) {
-            
-            for(Mendiak mendia : mendiaList){
-                idatzi.append(mendia.getMendiak().get(i).getId() + ";" + mendia.getMendiak().get(i).getMendia() + ";" + mendia.getMendiak().get(i).getAltuera() + ";" + mendia.getMendiak().get(i).getProbintzia() + "\n");
+
+            for (Mendiak mendia : mendiaList) {
+                idatzi.append(mendia.getMendiak().get(i).getId() + ";" + mendia.getMendiak().get(i).getMendia() + ";"
+                        + mendia.getMendiak().get(i).getAltuera() + ";" + mendia.getMendiak().get(i).getProbintzia()
+                        + "\n");
                 i++;
             }
 
-        } catch(IOException ex){
+        } catch (IOException ex) {
 
         }
         return i;
