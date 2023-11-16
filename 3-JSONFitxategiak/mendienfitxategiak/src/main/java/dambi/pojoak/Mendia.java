@@ -1,29 +1,25 @@
 package dambi.pojoak;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "id" , "mendia", "altuera", "probintzia" })
+@XmlType(propOrder = { "mendia", "altuera", "probintzia" })
 @XmlRootElement(name = "Mendia")
+
 public class Mendia {
-    private int id;
-    private String mendia;
-    private int altuera;
-    private String probintzia; 
-    
 
-    public Mendia(int id, String mendia, int altuera, String probintzia) {
-        this.id = id;
-        this.mendia = mendia;
-        this.altuera = altuera;
-        this.probintzia = probintzia;
+    int id = 0;
+    String mendia;
+    int altuera;
+    String probintzia;
+
+    public int getId(){
+       return id;
     }
 
-    public int getId() {
-        return id;
-    }
-    @XmlElement(name = "Mendia_Id")
+    @XmlAttribute(name = "id")
     public void setId(int id) {
         this.id = id;
     }
@@ -32,7 +28,7 @@ public class Mendia {
         return mendia;
     }
 
-    @XmlElement(name = "Mendia_Mendia")
+    @XmlElement(name = "Mendia")
     public void setMendia(String mendia) {
         this.mendia = mendia;
     }
@@ -41,7 +37,7 @@ public class Mendia {
         return altuera;
     }
 
-    @XmlElement(name = "Mendia_Altuera")
+    @XmlElement(name = "Altuera")
     public void setAltuera(int altuera) {
         this.altuera = altuera;
     }
@@ -50,10 +46,14 @@ public class Mendia {
         return probintzia;
     }
 
-    @XmlElement(name = "Mendia_Probintzia")
+    @XmlElement(name = "Probintzia")
     public void setProbintzia(String probintzia) {
         this.probintzia = probintzia;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Mendia["+ id+", "+mendia+", "+altuera+", "+probintzia+"]";
+    }
+
 }
